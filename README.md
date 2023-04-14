@@ -1,0 +1,3 @@
+# HashRate
+
+npm i 
