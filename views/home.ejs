@@ -1,0 +1,27 @@
+<!-- myView.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My View</title>
+  </head>
+  <body>
+    <h1>My View</h1>
+    <ul id="data-list"></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      axios.get('/http://localhost:3000/home')
+        .then(response => {
+          const dataList = document.getElementById('data-list');
+          response.data.forEach(item => {
+            const li = document.createElement('li');
+            li.innerText = item.name;
+            dataList.appendChild(li);
+          });
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    </script>
+  </body>
+</html>
