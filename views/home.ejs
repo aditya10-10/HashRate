@@ -1,27 +1,874 @@
-<!-- myView.ejs -->
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
   <head>
-    <title>My View</title>
-  </head>
-  <body>
-    <h1>My View</h1>
-    <ul id="data-list"></ul>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta charset="utf-8" />
+    <title>Smart Mining Hash Token Cloud Mining</title>
+    <meta name="description" content="description" />
+    <meta name="keywords" content="keywords" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script>
-      axios.get('/http://localhost:3000/home')
-        .then(response => {
-          const dataList = document.getElementById('data-list');
-          response.data.forEach(item => {
-            const li = document.createElement('li');
-            li.innerText = item.name;
-            dataList.appendChild(li);
-          });
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    </script>
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <!-- Main Header-->
+      <header class="main-header">
+        <!--Sticky Header-->
+        <div class="sticky-header">
+          <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+              <a href="index.html" class="img-responsive">
+                <img src="images/logo1.png" class="logo_speed_front" />
+              </a>
+            </div>
+
+            <!--Right Col-->
+            <div class="right-col pull-right">
+              <!-- Main Menu -->
+              <nav class="main-menu navbar-expand-md">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent1"
+                  aria-controls="navbarSupportedContent1"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+                <div
+                  class="navbar-collapse toubu clearfix"
+                  id="navbarSupportedContent1"
+                >
+                  <ul class="navigation clearfix">
+                    <li>
+                      <a class="active_home" href="index.html">Home</a>
+                    </li>
+                  </ul>
+                  <a
+                    href="signup"
+                    class="theme-btn btn-style-one sticky_start_mining_btn"
+                  >
+                    SignIn / SignUp
+                  </a>
+                </div>
+              </nav>
+              <!-- Main Menu End-->
+            </div>
+          </div>
+        </div>
+        <!--End Sticky Header-->
+      </header>
+      <!--End Main Header -->
+    </div>
+    <section class="banner-section">
+      <div class="auto-container">
+        <div class="clearfix">
+          <div class="content">
+            <h1>
+              Mining Digital
+              <br />
+              Gold Rush!
+            </h1>
+            <div class="text">
+              Unleashing digital riches through advanced technology
+              <br />
+              And with secure operations.
+            </div>
+            <a href="price" class="theme-btn btn-style-one2">
+              Don't wait, mine now!
+            </a>
+          </div>
+          <div class="image-box">
+            <figure class="image">
+              <img src="images/Homhero-banner.png" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="steps-section">
+      <div class="auto-container">
+        <div class="sec-title centered">
+          <div class="title">Advanced mining techniques</div>
+          <h2>
+            How Does Cloud
+            <br />
+            Mining Works?
+          </h2>
+        </div>
+
+        <div class="outer-container">
+          <div class="row clearfix">
+            <!-- Services Block Two -->
+            <div class="services-block-two col-lg-3 col-md-6 col-sm-12">
+              <div
+                class="inner-box wow fadeInUp animated"
+                data-wow-delay="0ms"
+                data-wow-duration="1500ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 0ms;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="icon-outer">
+                  <div class="icon-box">
+                    <img src="images/Signup.png" />
+                  </div>
+                </div>
+                <div class="lower-box">
+                  <h5><a href="#">You Register on HashRate</a></h5>
+                  <div class="text">
+                    Start mining with ease - register using your Bitcoin wallet.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Block Two -->
+            <div class="services-block-two col-lg-3 col-md-6 col-sm-12">
+              <div
+                class="inner-box wow fadeInUp animated"
+                data-wow-delay="300ms"
+                data-wow-duration="1500ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 300ms;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="icon-outer">
+                  <div class="icon-box">
+                    <img src="images/Add-Bitcoin-Wallet-Address.png" />
+                  </div>
+                </div>
+                <div class="lower-box">
+                  <h5><a href="#">Choose Hashpower and Upgrade</a></h5>
+                  <div class="text">
+                    Upgrade mining plans to premium, more power, more bitcoins.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Block Two -->
+            <div class="services-block-two col-lg-3 col-md-6 col-sm-12">
+              <div
+                class="inner-box wow fadeInUp animated"
+                data-wow-delay="600ms"
+                data-wow-duration="1500ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 600ms;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="icon-outer">
+                  <div class="icon-box">
+                    <img src="images/Start-Mining.png" />
+                  </div>
+                </div>
+                <div class="lower-box">
+                  <h5><a href="#">The Mining Process Begins</a></h5>
+                  <div class="text">
+                    We are super transparent, You will see live bitcoin mining.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Block Two -->
+            <div class="services-block-two col-lg-3 col-md-6 col-sm-12">
+              <div
+                class="inner-box wow fadeInUp animated"
+                data-wow-delay="900ms"
+                data-wow-duration="1500ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 900ms;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="icon-outer">
+                  <div class="icon-box">
+                    <img src="images/Upgrade-Your-Plan.png" />
+                  </div>
+                </div>
+                <div class="lower-box">
+                  <h5><a href="#">Receive Daily Your Mined Bitcoins</a></h5>
+                  <div class="text">
+                    Withdraw your bitcoin at any time, No minimum payout for
+                    premium users.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fluid-section-one">
+      <div class="image-layer"></div>
+      <div class="sec-title">
+        <div class="title">About Smart Mining</div>
+        <h2>The Mission of Smart Mining?</h2>
+      </div>
+      <div class="outer-container clearfix">
+        <!--Image Column-->
+        <div class="image-column">
+          <figure class="image-box">
+            <img src="images/picture-1.png" alt="" />
+          </figure>
+        </div>
+
+        <!--Content Column-->
+        <div class="content-column">
+          <div class="inner-column">
+            <div class="bold-text">
+              HashRate is a Mining platform developed by crypto
+              enthusiastic.
+            </div>
+            <div class="text">
+              HashRate, a platform developed by a team of blockchain
+              industry experts and IT engineers, offers a innovative
+              solution for cryptocurrency mining. With a team comprised of top
+              talent from companies like Amazon, Microsoft, and Stanford, HashRate
+               has the technical expertise and knowledge to provide users
+              with the lowest prices on electricity and purchasing costs in the
+              industry. They achieve this through their use of high-quality
+              renewable energy sources such as wind, hydro, and solar power.
+              With over half of their team working in research and development,
+              HashRate aims to expand their services throughout the entire
+              cryptocurrency industry chain, serving users worldwide through
+              technological innovation.
+            </div>
+
+            <div class="text">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title centered">
+          <div class="title">
+            Profit Every Hour and Intantantly
+            <br /><br />Withdraw It To Your Wallet
+          </div>
+          <h2>OUR FEATURES</h2>
+        </div>
+
+        <div class="row clearfix">
+          <!-- Services Block -->
+          <div class="services-block col-lg-4 col-md-6 col-sm-12">
+            <div
+              class="inner-box wow fadeInUp animated"
+              data-wow-delay="0ms"
+              data-wow-duration="1500ms"
+              style="
+                visibility: visible;
+                animation-duration: 1500ms;
+                animation-delay: 0ms;
+                animation-name: fadeInUp;
+              "
+            >
+              <div class="icon-box">
+                <span class="icon">
+                  <img src="images/Enhanced-account-Security.png" alt="" />
+                </span>
+              </div>
+              <h5><a href="#">Safe &amp; Secure</a></h5>
+              <div class="text">
+                Your bitcoin and account are secured with our advanced security features. No one can access your newly mined bitcoins except you.
+                you.
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Block -->
+          <div class="services-block col-lg-4 col-md-6 col-sm-12">
+            <div
+              class="inner-box wow fadeInUp animated"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+              style="
+                visibility: visible;
+                animation-duration: 1500ms;
+                animation-delay: 300ms;
+                animation-name: fadeInUp;
+              "
+            >
+              <div class="icon-box">
+                <span class="icon">
+                  <img src="images/Hassle-Free-Mining.png" alt="" />
+                </span>
+              </div>
+              <h5><a href="#">Effortless Mining</a></h5>
+              <div class="text">
+                Our cloud platform and mining pool are professionally managed by our team, and our servers run continuously around the clock in various locations worldwide.
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Block -->
+          <div class="services-block col-lg-4 col-md-6 col-sm-12">
+            <div
+              class="inner-box wow fadeInUp animated"
+              data-wow-delay="600ms"
+              data-wow-duration="1500ms"
+              style="
+                visibility: visible;
+                animation-duration: 1500ms;
+                animation-delay: 600ms;
+                animation-name: fadeInUp;
+              "
+            >
+              <div class="icon-box">
+                <span class="icon">
+                  <img src="images/Latest-Hardware.png" alt="" />
+                </span>
+              </div>
+              <h5><a href="#">Advance Hardware</a></h5>
+              <div class="text">
+                We employ cutting-edge hardware, such as ASIC miners and mining rigs, to deliver fast and cost-efficient mining capabilities.
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Block -->
+          <div class="services-block col-lg-4 col-md-6 col-sm-12">
+            <div
+              class="inner-box wow fadeInUp animated"
+              data-wow-delay="0ms"
+              data-wow-duration="1500ms"
+              style="
+                visibility: visible;
+                animation-duration: 1500ms;
+                animation-delay: 0ms;
+                animation-name: fadeInUp;
+              "
+            >
+              <div class="icon-box">
+                <span class="icon">
+                  <img src="images/Instant-Withdrawal.png" alt="" />
+                </span>
+              </div>
+              <h5><a href="#">Instant Withdrawal</a></h5>
+              <div class="text">
+                You can withdraw your mined bitcoin instantly once you reach the minimum payment threshold, without any delays or freezing!
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Block -->
+          <div class="services-block col-lg-4 col-md-6 col-sm-12">
+            <div
+              class="inner-box wow fadeInUp animated"
+              data-wow-delay="300ms"
+              data-wow-duration="1500ms"
+              style="
+                visibility: visible;
+                animation-duration: 1500ms;
+                animation-delay: 300ms;
+                animation-name: fadeInUp;
+              "
+            >
+              <div class="icon-box">
+                <span class="icon">
+                  <img src="images/Instant-Connect.png" alt="" />
+                </span>
+              </div>
+              <h5><a href="#">Instantly Connect</a></h5>
+              <div class="text">
+                We are Simple, Add your bitcoin wallet address, Mining Start
+                immediately. In case you upgrade, mining starts instantly once
+                we confirmed payment.
+              </div>
+            </div>
+          </div>
+
+          <!-- Services Block -->
+          <div class="services-block col-lg-4 col-md-6 col-sm-12">
+            <div
+              class="inner-box wow fadeInUp animated"
+              data-wow-delay="600ms"
+              data-wow-duration="1500ms"
+              style="
+                visibility: visible;
+                animation-duration: 1500ms;
+                animation-delay: 600ms;
+                animation-name: fadeInUp;
+              "
+            >
+              <div class="icon-box">
+                <span class="icon">
+                  <img src="images/Low-Maintanence-fees.png" alt="" />
+                </span>
+              </div>
+              <h5><a href="#">Low Maintenance Frees</a></h5>
+              <div class="text">
+                We are super transparent, No maintenance fees for premium plans.
+                No hidden fees or commission. Everything is visible to you.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="moment-section">
+      <div class="sec-title">
+        <div class="title">About HashRate</div>
+        <h2>
+          Cloud Mining Technology
+        </h2>
+      </div>
+      <div class="auto-container">
+        <div class="row clearfix">
+          <!-- Content Column -->
+          <div class="content-column col-lg-6 col-md-12 col-sm-12">
+            <div class="inner-column">
+              <!-- Sec Title -->
+
+              <div class="text">
+                The HashRate company is a team of blockchain professionals
+                and an online Mining platform for generating passive
+                income from cryptocurrency mining.
+              </div>
+
+              <!--Accordian Box-->
+              <ul class="accordion-box">
+                <!--Block-->
+                <li class="accordion block">
+                  <div class="acc-btn active">
+                    <div class="icon-outer">
+                      <span class="icon icon-plus fa fa-plus"></span>
+                      <span class="icon icon-minus fa fa-minus"></span>
+                    </div>
+                    Your Hardware is running and setup!
+                  </div>
+                  <div class="acc-content current">
+                    <div class="content">
+                      <div class="text">
+                        <p>
+                          The fastest bitcoin mining hardware is already running
+                          for you! Experience the fastest mining experience
+                          ever!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!--Block-->
+                <li class="accordion block">
+                  <div class="acc-btn">
+                    <div class="icon-outer">
+                      <span class="icon icon-plus fa fa-plus"></span>
+                      <span class="icon icon-minus fa fa-minus"></span>
+                    </div>
+                    Get your first bitcoin output within 24 hours!
+                  </div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">
+                        <p>
+                          Instantly withdraw your first newly mined bitcoin
+                          within 24 hours! Try our advanced free bitcoin mining
+                          platform now!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!--Block-->
+                <li class="accordion block">
+                  <div class="acc-btn">
+                    <div class="icon-outer">
+                      <span class="icon icon-plus fa fa-plus"></span>
+                      <span class="icon icon-minus fa fa-minus"></span>
+                    </div>
+                    We are passionate about Bitcoin and blockchain technology.
+                  </div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">
+                        <p>
+                          Our Mining services are accessible to everyone.
+                          We and our team believe in the future of
+                          cryptocurrency &amp; proud to be a part of this
+                          fast-growing community.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Image Column -->
+          <div class="image-column col-lg-6 col-md-12 col-sm-12">
+            <div class="inner-column">
+              <div class="image">
+                <img src="images/moment.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-section">
+      <div class="image-layer"></div>
+      <div class="auto-container">
+        <!-- Sec Title -->
+        <div class="sec-title" style="margin-top: 40px">
+          <div class="title">TESTIMONIALS</div>
+          <h2>
+            what clients say about
+            <br />
+            our services
+          </h2>
+        </div>
+      </div>
+
+      <div class="outer-container clearfix">
+        <!--Content Column-->
+        <div class="content-column">
+          <div class="inner-column">
+            <div class="swiper testimonial-carousel">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-3.png" alt="" />
+                          </div>
+                          <h5>Harsh Shinde</h5>
+                          <div class="designation">India</div>
+                        </div>
+                        <div class="text">
+                          Hashrate provides reliable and efficient cloud mining services for cryptocurrencies. The company has a user-friendly interface and excellent customer support, making it a top choice for miners.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-1.png" alt="" />
+                          </div>
+                          <h5>Aman Gill</h5>
+                          <div class="designation">India</div>
+                        </div>
+                        <div class="text">
+                          No hardware resource is required. Instead, join a mining pool and purchase "Hash power" to start crypto mining.
+
+The process is very smooth and pretty straightforward. You only have to pick a plan to see how the service works.
+
+The support team is excellent in help picking out the best plan.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-2.png" alt="" />
+                          </div>
+                          <h5>Matheus Gomes</h5>
+                          <div class="designation">Brazil</div>
+                        </div>
+                        <div class="text">
+                          Smart Mining contracts are really low-cost. I already
+                          recommended zeusmining to my friends and families.
+                          Transparent and high-quality software infrastructure
+                          leads to the best Smart Mining site.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-3.png" alt="" />
+                          </div>
+                          <h5>Matheus Gomes</h5>
+                          <div class="designation">Brazil</div>
+                        </div>
+                        <div class="text">
+                          Smart Mining contracts are really low-cost. I already
+                          recommended zeusmining to my friends and families.
+                          Transparent and high-quality software infrastructure
+                          leads to the best Smart Mining site.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-4.png" alt="" />
+                          </div>
+                          <h5>Matheus Gomes</h5>
+                          <div class="designation">Brazil</div>
+                        </div>
+                        <div class="text">
+                          Smart Mining contracts are really low-cost. I already
+                          recommended zeusmining to my friends and families.
+                          Transparent and high-quality software infrastructure
+                          leads to the best Smart Mining site.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-5.png" alt="" />
+                          </div>
+                          <h5>Matheus Gomes</h5>
+                          <div class="designation">Brazil</div>
+                        </div>
+                        <div class="text">
+                          Smart Mining contracts are really low-cost. I already
+                          recommended zeusmining to my friends and families.
+                          Transparent and high-quality software infrastructure
+                          leads to the best Smart Mining site.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-6.png" alt="" />
+                          </div>
+                          <h5>Matheus Gomes</h5>
+                          <div class="designation">Brazil</div>
+                        </div>
+                        <div class="text">
+                          Smart Mining contracts are really low-cost. I already
+                          recommended zeusmining to my friends and families.
+                          Transparent and high-quality software infrastructure
+                          leads to the best Smart Mining site.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-7.png" alt="" />
+                          </div>
+                          <h5>Matheus Gomes</h5>
+                          <div class="designation">Brazil</div>
+                        </div>
+                        <div class="text">
+                          Smart Mining contracts are really low-cost. I already
+                          recommended zeusmining to my friends and families.
+                          Transparent and high-quality software infrastructure
+                          leads to the best Smart Mining site.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial-block">
+                    <div class="inner-box">
+                      <div class="upper-box">
+                        <div class="upper-inner">
+                          <div class="image">
+                            <img src="images/author-8.png" alt="" />
+                          </div>
+                          <h5>Matheus Gomes</h5>
+                          <div class="designation">India</div>
+                        </div>
+                        <div class="text">
+                          Zeusmining offers affordable Smart Mining contracts. I
+                          have referred friends and family due to their
+                          transparent, high-quality infrastructure. The result
+                          is an exceptional Smart Mining platform.
+                        </div>
+                      </div>
+                      <div class="quote flaticon-quotations"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-nav">
+              <div class="owl-prev testimonial-button-next">
+                <span class="flaticon-left-arrow"></span>
+              </div>
+              <div class="owl-next testimonial-button-prev">
+                <span class="flaticon-next-1"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-form-section">
+      <div class="auto-container">
+        <div class="inner-container">
+          <h3>
+            Contact us for questions not covered in FAQs. We'll help promptly.
+          </h3>
+          <!-- Default Form -->
+          <div class="default-form">
+            <div class="row clearfix">
+              <div class="col-lg-12 col-md-12 col-sm-12 form-group text-center">
+                <a
+                  href="contact"
+                  class="theme-btn btn-style-one text-white"
+                >
+                  Contact with us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="auto-container">
+        <!--Widgets Section-->
+        <div class="widgets-section">
+          <div class="row clearfix">
+            <!--Column-->
+            <div class="big-column">
+              <!--Footer Column-->
+              <div class="footer-column">
+                <div class="footer-widget logo-widget">
+                  <div class="logo">
+                    <a href="javascript:;">
+                      <img
+                        class="logo_speed_footer"
+                        src="images/logo2.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="text">
+                    Our company has created a cutting-edge for Bitcoin that is
+                    user-friendly and available to anyone. We are proud to say
+                    that we have gained the trust of thousands of miners and
+                    have received high praise from knowledgeable individuals in
+                    the tech industry.
+                  </div>
+                </div>
+              </div>
+              <div class="footer-column">
+                <div class="footer-widget gallery-widget">
+                  <h4>GET IN TOUCH</h4>
+                  <div class="widget-content">
+                    <div>
+                      <ul class="list-style-one">
+                        <li>
+                          <span class="icon fa fa-home"></span>
+
+                          Andheri East S.O, Mumbai, Maharashtra, India (IN), Pin
+                          Code:-400069.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Footer Column-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="auto-container">
+          <div class="inner-container">
+            <div class="row clearfix">
+              <!-- Copyright Column -->
+              <div
+                class="copyright-column col-lg-12 col-md-12 col-sm-12 text-center"
+              >
+                <div class="copyright">
+                  Copyright © 2023 HashRate All Rights Reserved.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>
