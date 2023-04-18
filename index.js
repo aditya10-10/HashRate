@@ -17,12 +17,13 @@ app.use(cookieParser());
 
 
 app.use('/', require('./routes'));
-app.use('./assets', express.static('assets'));
+// app.use(express.static('/assets'));
+app.use('/assets', express.static(__dirname + '/assets'));
 
+app.use('./views', express.static('views'));
 // view engine called
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-
 
 
 
