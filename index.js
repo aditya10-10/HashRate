@@ -4,6 +4,8 @@ const port = 3000;
 const app = express();
 exports.app = app;
 const path = require('path');
+const LocalStrategy = require('passport-local').Strategy;
+const User = require('./models/User');
 
 
 // use express router $router
@@ -24,6 +26,38 @@ app.use('./views', express.static('views'));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+
+// ! Authentication part
+
+// const session = require('express-session');
+// const { log } = require('console');
+
+
+// app.use(session({
+//   name : 'codeial',
+//   secret: 'something',
+//   resave: false,
+//   saveUninitialized: false,
+//   cookie: { 
+//     maxAge: (1000 * 60 * 1000)
+//   },
+//   store: new MongoStore({
+//     mongooseConnection: db,
+//     autoRemove: 'disabled '
+//   },
+//   function(err){
+//     console.log((err));
+//   }  
+//   )
+// }
+
+// ));
+
+// app.use(passport.initialize());
+// app.use(passport.session());
+
+// app.use(passport.initialize()); 
+// app.use(passport.session);
 
 
 
