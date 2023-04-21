@@ -9,4 +9,6 @@ TO RUN THE CODE
 
 # node index.js
 
-# public == assets
+OR 
+
+# nodemon
